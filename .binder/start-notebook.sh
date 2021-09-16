@@ -11,8 +11,8 @@ fi
 
 if [[ -n "${JUPYTERHUB_API_TOKEN}" ]]; then
     # launched by JupyterHub, use single-user entrypoint
-    # exec /usr/local/bin/start-singleuser.sh "$@"
-     . /usr/local/bin/start.sh ${wrapper} jupyter notebook "$@"
+    exec /usr/local/bin/start-singleuser.sh "$@"
+    # . /usr/local/bin/start.sh ${wrapper} jupyter notebook "$@"
 elif [[ -n "${JUPYTER_ENABLE_LAB}" ]]; then
     # shellcheck disable=SC1091
     . /usr/local/bin/start.sh ${wrapper} jupyter lab "$@"
