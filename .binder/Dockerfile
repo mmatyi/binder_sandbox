@@ -4,7 +4,7 @@ ARG OWNER=jupyter
 ARG BASE_CONTAINER=$OWNER/minimal-notebook
 # FROM jupyter/scipy-notebook
 # FROM $BASE_CONTAINER
-FROM jupyter/r-notebook
+FROM jupyter/base-notebook
 
 # LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 
@@ -24,7 +24,7 @@ FROM jupyter/r-notebook
 #    gcc && \
 #    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-#USER ${NB_UID}
+USER ${NB_UID}
 
 # R packages including IRKernel which gets installed globally.
 # r-e1071: dependency of the caret R package
