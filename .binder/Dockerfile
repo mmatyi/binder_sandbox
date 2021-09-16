@@ -3,9 +3,10 @@
 ARG OWNER=jupyter
 ARG BASE_CONTAINER=$OWNER/minimal-notebook
 # FROM jupyter/scipy-notebook
-FROM $BASE_CONTAINER
+# FROM $BASE_CONTAINER
+FROM bitnami/jupyter-base-notebook
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
+# LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 
 USER root
 
