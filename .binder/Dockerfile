@@ -27,6 +27,7 @@ RUN apt-get update --yes && \
     wget \
     ca-certificates \
     sudo \
+    npm \
     locales \
     fonts-liberation \
     run-one && \
