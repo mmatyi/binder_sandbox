@@ -127,7 +127,7 @@ EXPOSE 8888
 
 # Configure container startup
 ENTRYPOINT ["tini", "-g", "--"]
-CMD ["start-notebook.sh -e JUPYTER_ENABLE_LAB=no"]
+CMD ["start-notebook.sh"]
 
 # Copy local files as late as possible to avoid cache busting
 COPY .binder/start.sh .binder/start-notebook.sh .binder/start-singleuser.sh /usr/local/bin/
