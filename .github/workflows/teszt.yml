@@ -6,11 +6,11 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    name: cran log data update
+    name: r package install
     container: rocker/verse
     steps:
       - uses: actions/checkout@v2
-      - run: add-apt-repository main
+      - run: sudo add-apt-repository main
       - run: add-apt-repository universe
       - run: add-apt-repository restricted
       - run: add-apt-repository multiverse
