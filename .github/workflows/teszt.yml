@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - run: apt-get update
       - run: apt-get install -y libunwind-dev libudunits2-dev libgdal-dev libproj-dev libprotobuf-dev
-      - run: R -e 'install.packages(c("sf", "giscoR", "RJDemetra"),repos="https://cloud.r-project.org")'
-      - run: R -e 'lapply(c("sf", "giscoR", "RJDemetra"), require, character.only = TRUE)'
+      - run: R -e 'install.packages(c("sf", "giscoR", "RJDemetra", "ggplot2", "gridExtra", "haven", "mapview", "restatapi", "rsdmx", "s2", "shinydashboard", "tidyverse", "tmap"),repos="https://cloud.r-project.org")'
+      - run: R -e 'lapply(c("sf", "giscoR", "RJDemetra", "ggplot2", "gridExtra", "haven", "mapview", "restatapi", "rsdmx", "s2", "shinydashboard", "tidyverse", "tmap"), require, character.only = TRUE)'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: updating restatapi logs files
