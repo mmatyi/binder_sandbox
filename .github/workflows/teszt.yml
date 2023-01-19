@@ -10,12 +10,12 @@ jobs:
     container: rocker/verse
     steps:
       - uses: actions/checkout@v2
-      - run: sudo add-apt-repository main
-      - run: add-apt-repository universe
-      - run: add-apt-repository restricted
-      - run: add-apt-repository multiverse
-      - run: apt-get update
-      - run: apt-get install libunwind-dev libudunits2-dev libgdal-dev libproj-dev libprotobuf-dev
+   #   - run: sudo add-apt-repository main
+   #   - run: add-apt-repository universe
+   #   - run: add-apt-repository restricted
+   #   - run: add-apt-repository multiverse
+   #   - run: apt-get update
+   #   - run: apt-get install libunwind-dev libudunits2-dev libgdal-dev libproj-dev libprotobuf-dev
       - run: R -e 'install.packages(c("sf", "giscoR"),repos="https://cloud.r-project.org")'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
